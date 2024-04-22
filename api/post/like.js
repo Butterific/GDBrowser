@@ -10,7 +10,6 @@ module.exports = async (app, req, res) => {
   if (!req.body.password) return res.status(400).send("No password provided!")
   if (!req.body.like) return res.status(400).send("No like flag provided! (1=like, 0=dislike)")
   if (!req.body.type) return res.status(400).send("No type provided! (1=level, 2=comment, 3=profile")
-  if (!req.body.extraID) return res.status(400).send("No extra ID provided! (this should be a level ID, account ID, or '0' for levels")
   
   let params = {
     udid: '0',
